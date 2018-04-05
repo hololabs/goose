@@ -1,0 +1,120 @@
+<!DOCTYPE xhml>
+<head>
+	<title>Wollstonecraft Node Editor</title>
+		
+	<link href="jquery-ui.css" rel="stylesheet">
+	<link href="jquery-ui.theme.css" rel="stylesheet">
+	<link rel="stylesheet" href="styles/fileMenu.css"/>
+	<link rel="stylesheet" href="styles/preview.css"/>
+	<link id="mainStyle" rel="stylesheet" href="styles/index.css"/>
+
+
+	<!-- Libs !-->
+	<script src="js/libs/base64.js"></script>
+	<script src="js/libs/jquery-3.1.1.js"></script>	
+	<script src="js/libs/jquery-ui.js"></script>
+	<script src="js/libs/jquery.autosize.js"></script>
+	<script src="https://unpkg.com/esprima@~3.1/dist/esprima.js"></script>	
+	
+	<!-- Settings !-->	
+	<script src="js/Settings.js"></script>
+	<script src="js/SettingsLive.js"></script>
+	
+	<!-- Editor !-->
+	<script src="js/GitHub.js"></script>
+	<script src="js/FileLister.js"></script>
+	<script src="js/RectUtility.js"></script>	
+	<script src="js/ClickToEdit.js"></script>
+	<script src="js/Point.js"></script>
+	<script src="js/UndoSystem.js"></script>	
+	<script src="js/ToolBar.js"></script>
+	<script src="js/GameStateManager.js"></script>	
+	<script src="js/MigrationSystem.js"></script>	
+	<script src="js/NodeSystem.js"></script>	
+	
+	<!-- Node Types !-->
+	
+
+	<link rel="stylesheet" href="js/NodeTypes/ControlNode.css"/>
+	<script src="js/NodeTypes/ControlNode.js"></script>
+
+	<link rel="stylesheet" href="js/NodeTypes/EndLineNode.css"/>
+	<script src="js/NodeTypes/EndLineNode.js"></script>
+	
+	<link rel="stylesheet" href="js/NodeTypes/RestoreNode.css"/>
+	<script src="js/NodeTypes/RestoreNode.js"></script>
+	
+	<link rel="stylesheet" href="js/NodeTypes/ReturnNode.css"/>
+	<script src="js/NodeTypes/ReturnNode.js"></script>
+	
+	<link rel="stylesheet" href="js/NodeTypes/ActionNode.css"/>
+	<script src="js/NodeTypes/ActionNode.js"></script>
+	
+	<link rel="stylesheet" href="js/NodeTypes/AnimationNode.css"/>
+	<script src="js/NodeTypes/AnimationNode.js"></script>
+	
+	<link rel="stylesheet" href="js/NodeTypes/CommentNode.css"/>
+	<script src="js/NodeTypes/CommentNode.js"></script>
+	
+	<link rel="stylesheet" href="js/NodeTypes/ConditionNode.css"/>
+	<script src="js/NodeTypes/ConditionNode.js"></script>
+	
+	<link rel="stylesheet" href="js/NodeTypes/DialogNode.css"/>
+	<script src="js/NodeTypes/DialogNode.js"></script>
+	
+	<link rel="stylesheet" href="js/NodeTypes/EndNode.css"/>
+	<script src="js/NodeTypes/EndNode.js"></script>
+	
+	<link rel="stylesheet" href="js/NodeTypes/GameStateNode.css"/>
+	<script src="js/NodeTypes/GameStateNode.js"></script>
+	
+	<link rel="stylesheet" href="js/NodeTypes/StartNode.css"/>
+	<script src="js/NodeTypes/StartNode.js"></script>
+	
+	<link rel="stylesheet" href="js/NodeTypes/SkipNode.css"/>
+	<script src="js/NodeTypes/SkipNode.js"></script>
+	
+	<link rel="stylesheet" href="js/NodeTypes/PlacecardNode.css"/>
+	<script src="js/NodeTypes/PlacecardNode.js"></script>
+	
+	<link rel="stylesheet" href="js/NodeTypes/GoToChapterNode.css"/>
+	<script src="js/NodeTypes/GoToChapterNode.js"></script>
+	
+	<!-- User Interface !-->
+	<script src="js/MousePanner.js"></script>
+	<script src="js/UserInterface.js"></script>	
+	<script src="js/Main.js"></script>
+	
+</head>
+<body>
+<img id="watermark" src="images/watermark.png"/>
+<div class="menu">
+	<span>File</span><ul>
+		<li id="new">New</li>
+		<li id="loadfromgithub">Load</li>
+		<li id="savetogithub">Save</li>
+		<li id="saveastogithub">Save As</li>
+		<hr/>
+		<li id="loadfromdisk">Load from file</li>		
+		<li id="download">Download</li>
+		<hr/>
+
+		<li id="import">Import</li>
+	</ul><span>Edit</span><ul>
+		<li id="selectall">Select All</li>
+		<li id="copyall">Copy All</li>
+		<hr/>
+		<li id="cut">Cut</li>
+		<li id="copy">Copy</li>
+	</ul><span>Help</span><ul>
+		<li id="info">Info</li>
+		<li id="help">Help</li>
+	</ul>
+</div>
+
+</div>
+	<textarea id="copyBuffer"></textarea>
+	<input style="display:none" id="fileDialog" type="file" />
+
+	
+</body>
